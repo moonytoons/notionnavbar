@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Handjet', cursive;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #ffffff;
+			text-decoration: none;
+			text-transform: lowercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #292828;
+		}
+
+		.border {
+			border: 2px solid #6a95cc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #6a95cc;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-fan"></i> zai's garden</a>
+		<a id="journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-journal-whills"></i> journal</a>
+		<a id="school" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-school"></i> school</a>
+		<a id="finances" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-hand-holding-dollar"></i> finances</a>
+		<a id="reading-corner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> reading corner</a>
+		<a id="workspace" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> workspace</a>
+		<a id="archive" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-trash-can"></i> archive</a>
+		<a id="quick-notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> quick notes</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/moonytoons/zai-s-garden-o-b9c52242740949378527fd333e7813c5?pvs=4", '_blank').focus();
+			else if (id == "journal")
+				window.open("https://www.notion.so/moonytoons/journal-5238e31850554666b9b922d96ee984d1?pvs=4", '_blank').focus();
+			else if (id == "school")
+				window.open("https://www.notion.so/moonytoons/school-4f5fb46e3f5b45d59dba2b5161dfc66d?pvs=4", '_blank').focus();
+			else if (id == "finances")
+				window.open("https://www.notion.so/moonytoons/finances-1f84c9ef739449bf89422932c5af5b5d?pvs=4", '_blank').focus();
+			else if (id == "reading-corner")
+				window.open("https://www.notion.so/moonytoons/reading-corner-c512e9a7009d4e3b8640d00a73c0f4ca?pvs=4", '_blank').focus();
+			else if (id == "workspace")
+				window.open("https://www.notion.so/moonytoons/workspace-dd06031bb02046468900532e3cb99787?pvs=4", '_blank').focus();
+			else if (id == "archive")
+				window.open("https://www.notion.so/moonytoons/archives-6cd34fc2ae4643f6b5167f687bab2ba8?pvs=4", '_blank').focus();
+			else if (id == "quick-notes")
+				window.open("https://www.notion.so/moonytoons/quick-notes-c88fbd9f7a9f45668411eaaa89158449?pvs=4", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
